@@ -1,0 +1,13 @@
+<h2>Add your own post</h2>
+<form novalidate #addForm="ngForm" (ngSubmit)="save(addForm.value)">
+  <mat-form-field>
+    <input matInput placeholder="Post title" id="title" name="title" required ngModel>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Post content" id="content" name="content" required ngModel></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color='accent' type="submit">Add Post</button>
+
+</form>

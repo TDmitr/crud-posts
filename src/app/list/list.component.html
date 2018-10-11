@@ -1,0 +1,8 @@
+<mat-form-field>
+  <input matInput placeholder="Search" (keyup)="search($event)">
+</mat-form-field>
+<mat-nav-list>
+  <a mat-list-item class="list-item" routerLinkActive="active" *ngFor="let post of filteredData" [routerLink]="['/posts/' + post.id]">
+    {{ post.title  | titlecase}}
+  </a>
+</mat-nav-list>

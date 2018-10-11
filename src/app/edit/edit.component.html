@@ -1,0 +1,13 @@
+<h2>Edit post</h2>
+<form #editForm="ngForm" (ngSubmit)="save(editForm.value)">
+  <mat-form-field>
+    <input matInput placeholder="Post title" name="title" [(ngModel)]="post.title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Post content" name="content" [(ngModel)]="post.content"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color='accent' type="submit">Save</button>
+
+</form>

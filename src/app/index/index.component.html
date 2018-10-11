@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a class='logoLink' [routerLink]="['/']">Posts App</a>
+    <span class="spacer"></span>
+    <a mat-raised-button [routerLink]="['/add']">Add post</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-drawer-container class="drawer-container">
+  <mat-drawer mode="side" opened class="side-container">
+    <app-list [data]="postList"></app-list>
+  </mat-drawer>
+  <mat-drawer-content class="main-container">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

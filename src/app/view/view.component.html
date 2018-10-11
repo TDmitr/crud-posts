@@ -1,0 +1,9 @@
+<mat-card class="card" *ngIf="post">
+  <mat-card-title>{{post.title}}</mat-card-title>
+  <mat-card-content>{{post.body}}</mat-card-content>
+  <mat-card-actions class="card__actions">
+    <button mat-raised-button color='warn' (click)="openDialog()">DELETE</button>
+    <a mat-raised-button color='primary' [routerLink]="['edit']">EDIT</a>
+  </mat-card-actions>
+</mat-card>
+
